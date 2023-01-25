@@ -47,13 +47,13 @@ public class DotProduct {
             System.out.printf("\n");
         }
 
-        Integer row2 = col;
+        Integer row2 = col; // Auto sets the row to match the columns of the first array
         System.out.printf("\nThe number of rows for the second 2D array (weights) is %s\n", row2);
         String input2 = cons.readLine("Enter the number of columns for the second 2D array (weights) is ");
         Integer col2 = Integer.parseInt(input2);
 
         System.out.printf("The weights have %s rows and %s columns\n", row2, col2);
-        Integer[][] weights = new Integer[row2][col2];
+        Integer[][] weights = new Integer[row2][col2]; // weights is the name of the second array
 
         // This loop asks the user to input the values into the weights
         // Using a nested for loop to enter in order and converts the String value into Integer
@@ -69,7 +69,6 @@ public class DotProduct {
         System.out.println("\nThe order of the weights matrix is below");
         // This loop displays the weights in order
         for (int i = 0; i < weights.length; i++) {
-
             for (int j = 0; j < weights[0].length; j++) {
                 System.out.printf(weights[i][j] + " ");
             }
@@ -81,7 +80,7 @@ public class DotProduct {
         // Declare new 2D array called dot product. 
         // It must have the row of the first matrix and column of the second matrix
         Integer[][] dotProduct = new Integer[row3][col3];
-        dotProduct[0][0] = 0;
+        // dotProduct[0][0] = 0;
               
         // This nested for loop calculates the mat and weights matrix
         for (int i = 0; i < mat.length; i++) {
